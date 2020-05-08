@@ -43,7 +43,7 @@
 > * [《剑指offer》（包含min函数的栈）](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49?tpId=13&tqId=11173&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
 ## Q：如何使用两个队列实现一个栈？
-> * 使用两个队列，一个是data队列，另一个是help队列，当入栈时直接将数据加入data队列；当出栈时，先抢data队列中前n-1个数据出队列，加入help队列；然后将第n个数出队列；最后将help队列中所有数据出队列加入data队列中。
+> * 使用两个队列，一个是data队列，另一个是help队列，当入栈时直接将数据加入data队列；当出栈时，先将data队列中前n-1个数据出队列，加入help队列；然后将第n个数出队列；最后将help队列中所有数据出队列加入data队列中。
 > * [《leetcode》（用队列实现栈）](https://leetcode-cn.com/problems/implement-stack-using-queues/)
 
 ## Q：如何使用两个栈实现一个队列结构？
