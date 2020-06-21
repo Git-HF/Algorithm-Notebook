@@ -33,10 +33,13 @@ public:
 
     ListNode* merge(ListNode* L1, ListNode* L2)
     {
+        //这一段可以不需要，因为在while循环之后的判断起了相同的作用。
+        /*
         if(L1 == NULL)
             return L2;
         else if (L2 == NULL)
             return L1;
+        */
         
         ListNode tmp_node;
         ListNode* head = &tmp_node;
@@ -46,20 +49,24 @@ public:
             {
                 head->next = L1;
                 L1 = L1->next;
-                head = head->next;
+                //head = head->next;
             }
             else
             {
                 head->next = L2;
                 L2 = L2->next;
-                head = head->next;
+                //head = head->next;
             } 
+            head = head->next;
         }
 
+/*
         if(L1)
             head->next = L1;
         else
             head->next = L2; 
+*/
+        head->next = L1 ? L1 : L2;
         return tmp_node.next;
     }
 };
