@@ -14,6 +14,7 @@ public:
             return head;
         }
 
+        // 注意这里fast必须初始化为head->next，不能初始化为head
         ListNode* fast = head->next, *low = head;
         while(fast && fast->next)
         {

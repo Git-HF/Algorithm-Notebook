@@ -27,7 +27,7 @@ public:
         ListNode tmp_node = ListNode(-1);
         tmp_node.next = head;
         
-        
+        // 这里不需要等于
         while(current_L < length)
         {
             ListNode* p = tmp_node.next;
@@ -56,6 +56,7 @@ public:
     {
         if(L == NULL)
             return NULL;
+        /*
         --n;
         while(n > 0)
         {
@@ -66,6 +67,12 @@ public:
             }
             else
                 break;    
+        }
+        */
+
+        while(--n & L)
+        {
+            L = L->next
         }
 
         ListNode* left = NULL;
