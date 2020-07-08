@@ -53,6 +53,7 @@ void heap_sort(vector<int> &arr)
     int heapSize = arr.size();
     for(int i = arr.size() - 1; i > 0; --i)
     {
+        // 交换操作最好不要在heap_ify中操作，不然会很麻烦。
         swap_int(arr[0], arr[i]);
         heap_ify(arr, 0, --heapSize);
     }
