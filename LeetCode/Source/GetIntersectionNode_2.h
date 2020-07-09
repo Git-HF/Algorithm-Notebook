@@ -13,6 +13,7 @@ public:
             return NULL;
         
         ListNode* endA = headA, *endB = headB;
+        // times主要是为了两个链表不相交时，及时终止。
         int times = 0;
         while(times < 2)
         {

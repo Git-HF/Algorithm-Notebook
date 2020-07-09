@@ -15,6 +15,7 @@ public:
         return result;
     }
 
+    // 该方法实际上还是DFS,只不过用特殊的结构存储，从而区分了不同的层。
     void help_func(vector<vector<int>> &result, TreeNode* root, int level)
     {
         if(!root)

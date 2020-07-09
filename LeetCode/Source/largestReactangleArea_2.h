@@ -28,6 +28,7 @@ public:
             help_stack.push(i);
         }        
 
+        // 在辅助栈中，最后一个元素必定是数组的长度。
         int end = heights.size();
         while(!help_stack.empty())
         {
