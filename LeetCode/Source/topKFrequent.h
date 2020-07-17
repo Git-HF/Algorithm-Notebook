@@ -29,21 +29,17 @@ public:
 
         auto iter = help_map.begin();
 
-        for(int i = 0; i < k; ++i)
+        int count = 0;
+        while(iter != help_map.end())
         {
             help_queue.push(*iter);
             ++iter;
-        }
+            ++count;
 
-        while(iter != help_map.end())
-        {
-            if(iter->second > help_queue.top().second)
+            if(count > k)
             {
                 help_queue.pop();
-                help_queue.push(*iter);
             }
-
-            ++iter;
         }
 
         vector<int> res;
